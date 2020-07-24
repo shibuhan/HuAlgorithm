@@ -6,6 +6,8 @@ import math
 def HU(graph):
     setLabels(graph)
     a = calcA(graph)
+    # If I followed the textbook, this "a" should have been passed as an argument to the HU function,
+    # but I needed a labeled Node to calculate "a", so I calculated it in the HU function.
 
     for j in range(1, len(graph)+1):
         U = getU(graph)
