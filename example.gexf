@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
+  <meta lastmodifieddate="2020-07-24">
+    <creator>NetworkX 2.4</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes class="node" mode="static">
+      <attribute id="0" title="time" type="long" />
+    </attributes>
+    <nodes>
+      <node id="NOP_TOP" label="NOP_TOP">
+        <attvalues>
+          <attvalue for="0" value="0" />
+        </attvalues>
+      </node>
+      <node id="A" label="A">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="C" label="C">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="B" label="B">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="D" label="D">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </node>
+      <node id="E" label="E">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </node>
+      <node id="NOP_SINK" label="NOP_SINK">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </node>
+      <node id="F" label="F">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </node>
+      <node id="G" label="G">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="H" label="H">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </node>
+      <node id="I" label="I">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </node>
+      <node id="J" label="J">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </node>
+      <node id="K" label="K">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="NOP_TOP" target="A" />
+      <edge id="1" source="NOP_TOP" target="B" />
+      <edge id="2" source="NOP_TOP" target="F" />
+      <edge id="3" source="NOP_TOP" target="H" />
+      <edge id="4" source="NOP_TOP" target="J" />
+      <edge id="5" source="A" target="C" />
+      <edge id="6" source="C" target="D" />
+      <edge id="7" source="B" target="C" />
+      <edge id="8" source="D" target="E" />
+      <edge id="9" source="E" target="NOP_SINK" />
+      <edge id="10" source="F" target="G" />
+      <edge id="11" source="G" target="E" />
+      <edge id="12" source="H" target="I" />
+      <edge id="13" source="I" target="NOP_SINK" />
+      <edge id="14" source="J" target="K" />
+      <edge id="15" source="K" target="NOP_SINK" />
+    </edges>
+  </graph>
+</gexf>
