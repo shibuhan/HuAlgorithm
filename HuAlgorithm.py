@@ -9,18 +9,17 @@ def HU(graph):
     # If I followed the textbook, this "a" should have been passed as an argument to the HU function,
     # but I needed a labeled Node to calculate "a", so I calculated it in the HU function.
 
-    for j in range(1, len(graph)+1):
+    l = 1
+    while len(list(filter(lambda node: not node.scheduled, graph))) != 0:
         U = getU(graph)
         S = getS(U, a)
-        schedule(S, j)
+        schedule(S, l)
+        l = l + 1
 
-        if len(S) == 0:
-            break
-
-        print("Time " + str(j), end=' ')
-        for node in S:
-            print(node.id, end=' ')
-        print()
+        # print("Time " + str(l-1), end=' ')
+        # for node in S:
+        #     print(node.id, end=' ')
+        # print()
 
 
 def setLabels(graph):
