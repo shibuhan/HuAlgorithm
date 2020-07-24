@@ -5,7 +5,7 @@ readFile = "./testdata.gexf"
 resultFile = "./result.gexf"
 
 
-def init():
+def read():
     testdata = nx.read_gexf(readFile)
 
     node_objects = []

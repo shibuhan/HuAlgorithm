@@ -72,7 +72,7 @@ def schedule(S, time):
 
 
 def main():
-    graph = GEXFManager.init()
+    graph = GEXFManager.read()
     HU(graph)
     GEXFManager.write(graph)
 
