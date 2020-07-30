@@ -11,26 +11,26 @@ class Node:
         self.successor = successor
         self.predecessors = predecessors
 
-    def hasPredecessors(self):
-        return len(self.predecessors) != 0
-
-    def allPredecessorsIsScheduled(self):
-        return all(predecessor.scheduled for predecessor in self.predecessors)
+    def setLabel(self):
+        self.label = self.__getDistance(self, self.label)
 
     def isTargetNode(self):
         if not self.scheduled:
-            return not self.hasPredecessors() or self.allPredecessorsIsScheduled()
+            return not self.__hasPredecessors() or self.__allPredecessorsIsScheduled()
         else:
             return False
 
-    def setLabel(self):
-        self.label = self.getDistance(self, self.label)
-
-    def getDistance(self, node, distance):
+    def __getDistance(self, node, distance):
         successor = node.successor
 
         if successor is None:
             return distance
         else:
             distance = distance + 1
-            return node.getDistance(successor, distance)
+            return node.__getDistance(successor, distance)
+
+    def __hasPredecessors(self):
+        return len(self.predecessors) != 0
+
+    def __allPredecessorsIsScheduled(self):
+        return all(predecessor.scheduled for predecessor in self.predecessors)
